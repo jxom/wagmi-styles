@@ -1,6 +1,6 @@
 {
-  "name": "@wagmi/style",
-  "version": "0.1.0",
+  "name": "@wagmi/styles",
+  "version": "0.0.0",
   "description": "A themeable TypeScript styling library for React Native (+ Web)",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -149,5 +149,8 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "uid": "^2.0.0"
   }
 }

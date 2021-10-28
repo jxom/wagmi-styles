@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@wagmi/style": ["./src/index"]
+      "@wagmi/styles": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

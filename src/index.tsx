@@ -1,5 +1,5 @@
-export default {
-  multiply(a: number, b: number) {
-    return Promise.resolve(a * b);
-  },
-};
+export * from './createStyleFn';
+export * from './createTheme';
+export * from './ThemeProvider';
+export * from './types';
+export * from './useStyle';

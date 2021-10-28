@@ -1,10 +1,10 @@
 {
-  "name": "@wagmi/style-example",
+  "name": "@wagmi/styles-example",
   "displayName": "Style Example",
   "expo": {
-    "name": "@wagmi/style-example",
+    "name": "@wagmi/styles-example",
     "slug": "wagmi-style-example",
-    "description": "Example app for @wagmi/style",
+    "description": "Example app for @wagmi/styles",
     "privacy": "public",
     "version": "1.0.0",
     "platforms": [

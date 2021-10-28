@@ -1,6 +1,6 @@
 {
-  "name": "@wagmi/style-example",
-  "description": "Example app for @wagmi/style",
+  "name": "@wagmi/styles-example",
+  "description": "Example app for @wagmi/styles",
   "version": "0.0.1",
   "private": true,
   "main": "index",
@@ -12,13 +12,18 @@
     "test": "jest"
   },
   "dependencies": {
+    "@capsizecss/core": "^3.0.0",
+    "@expo-google-fonts/inter": "^0.2.0",
+    "@expo-google-fonts/montserrat": "^0.2.0",
     "expo": "^40.0.0",
+    "expo-font": "~8.4.0",
     "expo-splash-screen": "~0.8.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "0.63.4",
     "react-native-unimodules": "~0.12.0",
-    "react-native-web": "~0.14.9"
+    "react-native-web": "~0.14.9",
+    "uid": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "~7.12.10",
