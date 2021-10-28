@@ -1,0 +1,22 @@
+{
+  "name": "@wagmi/style-example",
+  "displayName": "Style Example",
+  "expo": {
+    "name": "@wagmi/style-example",
+    "slug": "wagmi-style-example",
+    "description": "Example app for @wagmi/style",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
