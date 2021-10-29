@@ -32,10 +32,18 @@ export const [themeA, vars] = createTheme({
       regular: {
         fontFamilySuffix: '',
       },
+      medium: {
+        fontFamilySuffix: 'Medium',
+      },
       heavy: {
         fontFamilySuffix: 'Heavy',
       },
     },
+  },
+  sizes: {
+    small: 200,
+    medium: 400,
+    large: 600,
   },
   textSizes: {
     default: {
@@ -77,10 +85,18 @@ export const themeB = createTheme(vars, {
       regular: {
         fontFamilySuffix: '',
       },
+      medium: {
+        fontFamilySuffix: 'Medium',
+      },
       heavy: {
         fontFamilySuffix: 'Heavy',
       },
     },
+  },
+  sizes: {
+    small: 100,
+    medium: 200,
+    large: 300,
   },
   textSizes: {
     default: {

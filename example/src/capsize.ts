@@ -1,7 +1,7 @@
 import { precomputeValues } from '@capsizecss/core';
 import { PixelRatio } from 'react-native';
 
-import { vars as themeVars } from './theme';
+import type { vars as themeVars } from './theme';
 
 const capsize = (options: Parameters<typeof precomputeValues>[0]) => {
   const values = precomputeValues(options);
@@ -60,7 +60,8 @@ export const createTextStyle = (
 
   const marginCorrection =
     fontSize in fontMetrics.marginCorrection
-      ? fontMetrics.marginCorrection[fontSize]
+      ? // @ts-ignore
+        fontMetrics.marginCorrection[fontSize]
       : 0;
 
   return {

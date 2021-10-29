@@ -17,6 +17,9 @@
     },
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "extra": {
+      "flipperHack": "React Native packager is running"
+    }
   }
 }
