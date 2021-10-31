@@ -109,4 +109,4 @@ export const themeB = createTheme(vars, {
   },
 });
 
-export const style = createStyleFn(themeA, themeB);
+export const { style, styleVariants } = createStyleFn(themeA, themeB);

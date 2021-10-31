@@ -1,4 +1,5 @@
 import { generateStyleFn } from './private/generateStyleFn';
+import { generateStyleVariantsFn } from './private/generateStyleVariantsFn';
 import type { ThemeDefinition, ThemeVars, Tokens } from './types';
 
 export function createStyleFn<ThemeTokens extends Tokens>(
@@ -17,5 +18,12 @@ export function createStyleFn<ThemeTokens extends Tokens>(
     {}
   );
 
-  return generateStyleFn(themeMap as { [id: string]: ThemeVars<ThemeTokens> });
+  const style = generateStyleFn(
+    themeMap as { [id: string]: ThemeVars<ThemeTokens> }
+  );
+  const styleVariants = generateStyleVariantsFn(
+    themeMap as { [id: string]: ThemeVars<ThemeTokens> }
+  );
+
+  return { style, styleVariants };
 }

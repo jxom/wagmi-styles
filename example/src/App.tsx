@@ -4,7 +4,7 @@ import { useFonts } from 'expo-font';
 import { ThemeProvider, useStyle } from '@wagmi/styles';
 
 import { createTextStyle } from './capsize';
-import { themeA, themeB, style } from './theme';
+import { themeA, themeB, style, styleVariants } from './theme';
 
 export default function App() {
   const [theme, setTheme] = React.useState(themeA);
@@ -29,9 +29,11 @@ export default function App() {
             <Text>Theme B</Text>
           </TouchableOpacity>
         </View>
-        <SimpleExample />
+        {/* <SimpleExample /> */}
         <CompositionExample />
-        <CapsizeExample />
+        <VariantsExample variant="primary" />
+        <VariantsExample variant="secondary" />
+        {/* <CapsizeExample /> */}
       </Layout>
     </ThemeProvider>
   );
@@ -75,11 +77,11 @@ export const size = style((vars) => ({
   width: vars.sizes.small,
 }));
 export const spacing = style({ padding: 16, margin: 8 });
-export const composedBoxStyleRef = style((vars) => [
+export const composedBoxStyleRef = style([
   size,
   spacing,
   {
-    backgroundColor: vars.colors.secondary,
+    backgroundColor: 'red',
   },
 ]);
 
@@ -88,6 +90,28 @@ function CompositionExample() {
   return (
     <View>
       <View style={boxStyle} />
+    </View>
+  );
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+export const variantBoxStyleRef = styleVariants((vars) => ({
+  primary: [size, spacing, { backgroundColor: vars.colors.primary }],
+  secondary: [
+    size,
+    spacing,
+    {
+      backgroundColor: vars.colors.secondary,
+    },
+  ],
+}));
+
+function VariantsExample(props: any) {
+  const boxStyle = useStyle(variantBoxStyleRef);
+  return (
+    <View>
+      <View style={boxStyle[props.variant]} />
     </View>
   );
 }
