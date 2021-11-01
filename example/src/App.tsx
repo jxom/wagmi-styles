@@ -1,10 +1,17 @@
 import * as React from 'react';
 import { View, TouchableOpacity, Text } from 'react-native';
 import { useFonts } from 'expo-font';
-import { ThemeProvider, useStyle, useStyleVariants } from '@wagmi/styles';
 
 import { createTextStyle } from './capsize';
-import { themeA, themeB, style, styleVariants } from './theme';
+import {
+  themeA,
+  themeB,
+  style,
+  styleVariants,
+  ThemeProvider,
+  useStyle,
+  useStyleVariants,
+} from './theme';
 
 export default function App() {
   const [theme, setTheme] = React.useState(themeA);

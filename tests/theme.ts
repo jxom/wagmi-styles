@@ -1,6 +1,6 @@
-import { createTheme, createStyleFn } from '../src';
+import { createTheme, buildTheme } from '../src';
 
-export const [themeA, vars] = createTheme({
+export const themeA = createTheme({
   colors: {
     primary: 'blue',
     secondary: 'hotpink',
@@ -12,7 +12,7 @@ export const [themeA, vars] = createTheme({
   },
 });
 
-export const themeB = createTheme(vars, {
+export const themeB = createTheme(themeA, {
   colors: {
     primary: 'red',
     secondary: 'black',
@@ -24,4 +24,10 @@ export const themeB = createTheme(vars, {
   },
 });
 
-export const { style, styleVariants } = createStyleFn(themeA, themeB);
+export const {
+  style,
+  styleVariants,
+  ThemeProvider,
+  useStyle,
+  useStyleVariants,
+} = buildTheme(themeA, themeB);

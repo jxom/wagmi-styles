@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`themed nested themes 1`] = `
+Array [
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "hotpink",
+          "color": "blue",
+          "display": "flex",
+          "height": "100%",
+          "justifyContent": "center",
+        },
+      ]
+    }
+  />,
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "black",
+          "color": "red",
+          "display": "flex",
+          "height": "100%",
+          "justifyContent": "center",
+        },
+      ]
+    }
+  />,
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "black",
+          "color": "red",
+          "display": "flex",
+          "height": "100%",
+          "justifyContent": "center",
+        },
+      ]
+    }
+  />,
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "yellow",
+          "color": "green",
+          "display": "flex",
+          "height": "100%",
+          "justifyContent": "center",
+          "padding": 16,
+        },
+      ]
+    }
+  />,
+]
+`;
+
+exports[`themed simple style 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "height": "100%",
+        "justifyContent": "center",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`themed style with theme vars 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "hotpink",
+        "color": "blue",
+        "display": "flex",
+        "height": "100%",
+        "justifyContent": "center",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`themed style with theme vars 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "black",
+        "color": "red",
+        "display": "flex",
+        "height": "100%",
+        "justifyContent": "center",
+      },
+    ]
+  }
+/>
+`;

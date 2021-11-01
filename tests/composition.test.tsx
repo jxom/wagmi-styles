@@ -2,8 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { render } from '@testing-library/react-native';
 
-import { ThemeProvider, useStyle } from '../src';
-import { themeA, themeB, style } from './theme';
+import { themeA, themeB, style, ThemeProvider, useStyle } from './theme';
 
 describe('composition', () => {
   const size = style((vars) => ({

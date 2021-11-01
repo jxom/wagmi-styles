@@ -2,8 +2,14 @@ import React from 'react';
 import { View } from 'react-native';
 import { render } from '@testing-library/react-native';
 
-import { ThemeProvider, useStyleVariants } from '../src';
-import { themeA, themeB, style, styleVariants } from './theme';
+import {
+  themeA,
+  themeB,
+  ThemeProvider,
+  style,
+  styleVariants,
+  useStyleVariants,
+} from './theme';
 
 describe('variants', () => {
   const variantsStyleRef = styleVariants({

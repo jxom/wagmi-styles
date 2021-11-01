@@ -1,4 +1,4 @@
-export * from './createStyleFn';
+export * from './buildTheme';
 export * from './createTheme';
 export * from './style';
 export * from './ThemeProvider';

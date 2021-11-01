@@ -1,9 +1,9 @@
 import { Platform } from 'react-native';
-import { createTheme, createStyleFn } from '@wagmi/styles';
+import { createTheme, buildTheme } from '@wagmi/styles';
 
 const ios = Platform.OS === 'ios';
 
-export const [themeA, vars] = createTheme({
+export const themeA = createTheme({
   colors: {
     primary: 'blue',
     secondary: 'hotpink',
@@ -56,7 +56,7 @@ export const [themeA, vars] = createTheme({
   },
 });
 
-export const themeB = createTheme(vars, {
+export const themeB = createTheme(themeA, {
   colors: {
     primary: 'red',
     secondary: 'black',
@@ -109,4 +109,10 @@ export const themeB = createTheme(vars, {
   },
 });
 
-export const { style, styleVariants } = createStyleFn(themeA, themeB);
+export const {
+  style,
+  styleVariants,
+  ThemeProvider,
+  useStyle,
+  useStyleVariants,
+} = buildTheme(themeA, themeB);
