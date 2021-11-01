@@ -2,7 +2,7 @@ import * as React from 'react';
 import type { StyleSheet } from 'react-native';
 
 import { ThemeContext } from './ThemeProvider';
-import type { StyleRef, StyleRefInput } from './types';
+import type { StyleRef, VariantStyleRef } from './types';
 
 function createStyle<
   T extends StyleSheet.NamedStyles<T> | StyleSheet.NamedStyles<any>
@@ -20,15 +20,19 @@ function createStyle<
   return [styleSheet, ...composedStyleSheets];
 }
 
-export function useStyle<T>(styleRef: StyleRefInput<T>) {
+export function useStyle<T>(styleRef: StyleRef<T>) {
   const { theme } = React.useContext<any>(ThemeContext);
 
-  if (styleRef._styleSheet) {
-    return createStyle({
-      styleRef: styleRef as StyleRef<T>,
-      themeId: theme._id,
-    });
-  }
+  return createStyle({
+    styleRef: styleRef as StyleRef<T>,
+    themeId: theme._id,
+  });
+}
+
+export function useStyleVariants<T, V extends Record<string, StyleRef<T>>>(
+  styleRef: VariantStyleRef<T, V>
+) {
+  const { theme } = React.useContext<any>(ThemeContext);
 
   return Object.entries(styleRef).reduce(
     (currentStyle, [variantKey, styleRef]) => {
@@ -38,5 +42,5 @@ export function useStyle<T>(styleRef: StyleRefInput<T>) {
       };
     },
     {}
-  );
+  ) as Record<keyof V, {}>;
 }

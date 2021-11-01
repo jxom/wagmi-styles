@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`composition composed style 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "red",
+      },
+      Object {
+        "height": 100,
+        "width": 200,
+      },
+      Object {
+        "margin": 8,
+        "padding": 16,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`composition composed style 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "red",
+      },
+      Object {
+        "height": 200,
+        "width": 400,
+      },
+      Object {
+        "margin": 8,
+        "padding": 16,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`composition composed style with theme vars 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "blue",
+      },
+      Object {
+        "height": 100,
+        "width": 200,
+      },
+      Object {
+        "margin": 8,
+        "padding": 16,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`composition composed style with theme vars 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "red",
+      },
+      Object {
+        "height": 200,
+        "width": 400,
+      },
+      Object {
+        "margin": 8,
+        "padding": 16,
+      },
+    ]
+  }
+/>
+`;

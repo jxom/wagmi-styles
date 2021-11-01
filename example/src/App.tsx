@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { View, TouchableOpacity, Text } from 'react-native';
 import { useFonts } from 'expo-font';
-import { ThemeProvider, useStyle } from '@wagmi/styles';
+import { ThemeProvider, useStyle, useStyleVariants } from '@wagmi/styles';
 
 import { createTextStyle } from './capsize';
 import { themeA, themeB, style, styleVariants } from './theme';
@@ -108,7 +108,7 @@ export const variantBoxStyleRef = styleVariants((vars) => ({
 }));
 
 function VariantsExample(props: any) {
-  const boxStyle = useStyle(variantBoxStyleRef);
+  const boxStyle = useStyleVariants(variantBoxStyleRef);
   return (
     <View>
       <View style={boxStyle[props.variant]} />

@@ -25,11 +25,7 @@ export type StyleRef<
   _styleSheet: { [themeId: string]: T };
   _composedStyleSheets: { [themeId: string]: Array<T> };
 };
-export type VariantStyleRef<T> = {
-  [variantKey: string]: StyleRef<T>;
-};
-
-export type StyleRefInput<T> = StyleRef<T> | VariantStyleRef<T>;
+export type VariantStyleRef<T, V extends Record<string, StyleRef<T>>> = V;
 
 export type ThemeVars<ThemeContract extends Tokens> = MapLeafNodes<
   ThemeContract,
