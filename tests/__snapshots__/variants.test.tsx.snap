@@ -30,15 +30,15 @@ exports[`variants variants w/ composition style 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "blue",
-      },
-      Object {
         "height": 100,
         "width": 100,
       },
       Object {
         "margin": 8,
         "padding": 16,
+      },
+      Object {
+        "backgroundColor": "blue",
       },
     ]
   }
@@ -50,15 +50,15 @@ exports[`variants variants w/ composition style 2`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "red",
-      },
-      Object {
         "height": 200,
         "width": 200,
       },
       Object {
         "margin": 8,
         "padding": 16,
+      },
+      Object {
+        "backgroundColor": "red",
       },
     ]
   }

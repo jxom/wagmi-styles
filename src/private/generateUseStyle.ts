@@ -16,7 +16,7 @@ function createStyle<
     composedStyleSheets = styleRef._composedStyleSheets[themeId] || [];
   }
 
-  return [styleSheet, ...composedStyleSheets];
+  return [...composedStyleSheets, styleSheet];
 }
 
 export function generateUseStyle(ThemeContext: any) {

@@ -5,15 +5,15 @@ exports[`composition composed style 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "red",
-      },
-      Object {
         "height": 100,
         "width": 200,
       },
       Object {
         "margin": 8,
         "padding": 16,
+      },
+      Object {
+        "backgroundColor": "red",
       },
     ]
   }
@@ -25,15 +25,15 @@ exports[`composition composed style 2`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "red",
-      },
-      Object {
         "height": 200,
         "width": 400,
       },
       Object {
         "margin": 8,
         "padding": 16,
+      },
+      Object {
+        "backgroundColor": "red",
       },
     ]
   }
@@ -45,15 +45,15 @@ exports[`composition composed style with theme vars 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "blue",
-      },
-      Object {
         "height": 100,
         "width": 200,
       },
       Object {
         "margin": 8,
         "padding": 16,
+      },
+      Object {
+        "backgroundColor": "blue",
       },
     ]
   }
@@ -65,15 +65,15 @@ exports[`composition composed style with theme vars 2`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "red",
-      },
-      Object {
         "height": 200,
         "width": 400,
       },
       Object {
         "margin": 8,
         "padding": 16,
+      },
+      Object {
+        "backgroundColor": "red",
       },
     ]
   }
