@@ -3,7 +3,7 @@ import type { StyleSheet } from 'react-native';
 
 import type { StyleRef, VariantStyleRef } from '../types';
 
-function createStyle<
+export function createStyle<
   T extends StyleSheet.NamedStyles<T> | StyleSheet.NamedStyles<any>
 >({ styleRef, themeId }: { styleRef: StyleRef<T>; themeId: string }) {
   let styleSheet;

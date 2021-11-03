@@ -16,14 +16,18 @@ it('basic styles', () => {
     },
   };
 
-  const style = generateStyleFn({ themeMap });
+  const style = generateStyleFn(themeMap);
   const stylesheets = style({ color: 'red', backgroundColor: 'black' });
 
   expect(stylesheets).toMatchInlineSnapshot(`
     Object {
       "_composedStyleSheets": Object {},
       "_styleSheet": Object {
-        "themeMap": Object {
+        "theme1": Object {
+          "backgroundColor": "black",
+          "color": "red",
+        },
+        "theme2": Object {
           "backgroundColor": "black",
           "color": "red",
         },
