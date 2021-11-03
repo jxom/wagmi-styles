@@ -6,7 +6,7 @@ import {
 import { ThemeContext } from './ThemeProvider';
 import type { StyleRef, VariantStyleRef } from './types';
 
-export function useStyle<T>(styleRef: StyleRef<T>) {
+export function useStyle<T>(styleRef: StyleRef<T> | Array<StyleRef<T>>) {
   return generateUseStyle(ThemeContext)(styleRef);
 }
 

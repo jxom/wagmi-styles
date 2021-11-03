@@ -33,7 +33,7 @@ describe('variants', () => {
     );
   }
 
-  it('variants style', () => {
+  test('variants style', () => {
     const { toJSON } = render(
       <ThemeProvider theme={themeA}>
         <Variants />
@@ -66,7 +66,7 @@ describe('variants', () => {
   }
 
   [themeA, themeB].forEach((theme) => {
-    it('variants w/ composition style', () => {
+    test('variants w/ composition style', () => {
       const { toJSON } = render(
         <ThemeProvider theme={theme}>
           <VariantsWithComposition />

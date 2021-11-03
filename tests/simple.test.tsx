@@ -17,8 +17,28 @@ describe('simple', () => {
     return <View style={exampleStyle} />;
   }
 
-  it('simple style', () => {
+  test('simple style', () => {
     const { toJSON } = render(<Example />);
+    expect(toJSON()).toMatchSnapshot();
+  });
+
+  ////////////////////////////////////////////////////////////////////////
+
+  const anotherStyleRef = style({
+    backgroundColor: 'red',
+    color: 'blue',
+  });
+
+  function Multiple() {
+    const [exampleStyle, anotherStyle] = useStyle([
+      exampleStyleRef,
+      anotherStyleRef,
+    ]);
+    return <View style={[exampleStyle, anotherStyle]} />;
+  }
+
+  test('simple style (multiple)', () => {
+    const { toJSON } = render(<Multiple />);
     expect(toJSON()).toMatchSnapshot();
   });
 });

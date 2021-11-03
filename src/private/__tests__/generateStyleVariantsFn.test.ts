@@ -1,7 +1,7 @@
 import { generateStyleFn } from '../generateStyleFn';
 import { generateStyleVariantsFn } from '../generateStyleVariantsFn';
 
-it('basic styles', () => {
+test('basic styles', () => {
   const themeMap: any = {
     theme1: {
       colors: {
@@ -55,7 +55,7 @@ it('basic styles', () => {
   `);
 });
 
-it('basic styles (with vars)', () => {
+test('basic styles (with vars)', () => {
   const themeMap: any = {
     theme1: {
       colors: {
@@ -115,7 +115,7 @@ it('basic styles (with vars)', () => {
   `);
 });
 
-it('basic styles (array)', () => {
+test('basic styles (array)', () => {
   const themeMap: any = {
     theme1: {
       colors: {
@@ -195,7 +195,7 @@ it('basic styles (array)', () => {
   `);
 });
 
-it('basic styles (composition)', () => {
+test('basic styles (composition)', () => {
   const themeMap: any = {
     theme1: {
       colors: {

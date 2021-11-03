@@ -1,6 +1,6 @@
 import { createStyleSheets } from '../createStyleSheets';
 
-it('basic styles', () => {
+test('basic styles', () => {
   const themeMap: any = {
     theme1: {
       colors: {
@@ -39,7 +39,7 @@ it('basic styles', () => {
   `);
 });
 
-it('basic styles (as array)', () => {
+test('basic styles (as array)', () => {
   const themeMap: any = {
     theme1: {
       colors: {
@@ -103,7 +103,7 @@ it('basic styles (as array)', () => {
   `);
 });
 
-it('composed styles', () => {
+test('composed styles', () => {
   const themeMap: any = {
     theme1: {
       colors: {

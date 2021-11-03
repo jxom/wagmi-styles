@@ -1,4 +1,5 @@
 import { createContext } from 'react';
+import { generateStyled } from './private/generateStyled';
 import { generateStyleFn } from './private/generateStyleFn';
 import { generateStyleVariantsFn } from './private/generateStyleVariantsFn';
 import { generateThemeProvider } from './private/generateThemeProvider';
@@ -11,7 +12,9 @@ import type { ThemeDefinition, ThemeVars, Tokens } from './types';
 export function buildTheme<ThemeTokens extends Tokens>(
   ...themes: Array<ThemeDefinition<ThemeTokens>>
 ) {
-  const ThemeContext = createContext({ theme: { _id: '_' } });
+  const ThemeContext = createContext({
+    theme: { _id: themes?.[0]?._id || '_' },
+  });
 
   const themeMap = (themes as Array<ThemeDefinition<ThemeTokens>>).reduce(
     (
@@ -35,6 +38,14 @@ export function buildTheme<ThemeTokens extends Tokens>(
   const ThemeProvider = generateThemeProvider(ThemeContext);
   const useStyle = generateUseStyle(ThemeContext);
   const useStyleVariants = generateUseStyleVariants(ThemeContext);
+  const styled = generateStyled({ style, useStyle });
 
-  return { style, styleVariants, ThemeProvider, useStyle, useStyleVariants };
+  return {
+    style,
+    styleVariants,
+    styled,
+    ThemeProvider,
+    useStyle,
+    useStyleVariants,
+  };
 }

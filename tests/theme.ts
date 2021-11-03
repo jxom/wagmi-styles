@@ -27,6 +27,7 @@ export const themeB = createTheme(themeA, {
 export const {
   style,
   styleVariants,
+  styled,
   ThemeProvider,
   useStyle,
   useStyleVariants,

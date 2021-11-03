@@ -1,5 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`simple simple style (multiple) 1`] = `
+<View
+  style={
+    Array [
+      Array [
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "height": "100%",
+          "justifyContent": "center",
+        },
+      ],
+      Array [
+        Object {
+          "backgroundColor": "red",
+          "color": "blue",
+        },
+      ],
+    ]
+  }
+/>
+`;
+
 exports[`simple simple style 1`] = `
 <View
   style={

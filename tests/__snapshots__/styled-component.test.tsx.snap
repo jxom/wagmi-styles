@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`styled component simple style 1`] = `
+<View
+  style={
+    Array [
+      Array [
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "height": "100%",
+          "justifyContent": "center",
+        },
+      ],
+    ]
+  }
+/>
+`;
+
+exports[`styled component with component composition 1`] = `
+<View
+  style={
+    Array [
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "blue",
+          "color": "hotpink",
+          "display": "flex",
+          "height": "100%",
+          "justifyContent": "center",
+        },
+      ],
+      Array [
+        Object {
+          "backgroundColor": "blue",
+          "color": "hotpink",
+        },
+      ],
+    ]
+  }
+/>
+`;
+
+exports[`styled component with composition 1`] = `
+<View
+  style={
+    Array [
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "blue",
+          "color": "hotpink",
+          "display": "flex",
+          "height": "100%",
+          "justifyContent": "center",
+        },
+      ],
+    ]
+  }
+/>
+`;
+
+exports[`styled component with theme vars 1`] = `
+<View
+  style={
+    Array [
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "blue",
+          "color": "hotpink",
+          "display": "flex",
+          "height": "100%",
+          "justifyContent": "center",
+        },
+      ],
+    ]
+  }
+/>
+`;

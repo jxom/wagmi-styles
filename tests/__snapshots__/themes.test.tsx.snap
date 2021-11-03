@@ -62,7 +62,22 @@ Array [
 ]
 `;
 
-exports[`themed simple style 1`] = `
+exports[`themed simple style (w/ ThemeProvider) 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "height": "100%",
+        "justifyContent": "center",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`themed simple style (wo/ ThemeProvider) 1`] = `
 <View
   style={
     Array [

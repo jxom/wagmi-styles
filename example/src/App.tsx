@@ -36,10 +36,10 @@ export default function App() {
             <Text>Theme B</Text>
           </TouchableOpacity>
         </View>
-        {/* <SimpleExample /> */}
-        <CompositionExample />
-        <VariantsExample variant="primary" />
-        <VariantsExample variant="secondary" />
+        <SimpleExample />
+        {/* <CompositionExample /> */}
+        {/* <VariantsExample variant="primary" /> */}
+        {/* <VariantsExample variant="secondary" /> */}
         {/* <CapsizeExample /> */}
       </Layout>
     </ThemeProvider>

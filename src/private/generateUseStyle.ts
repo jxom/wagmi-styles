@@ -20,9 +20,14 @@ export function createStyle<
 }
 
 export function generateUseStyle(ThemeContext: any) {
-  return function useStyle<T>(styleRef: StyleRef<T>) {
+  return function useStyle<T>(styleRef: StyleRef<T> | Array<StyleRef<T>>) {
     const { theme } = React.useContext<any>(ThemeContext);
 
+    if (Array.isArray(styleRef)) {
+      return styleRef.map((styleRef) =>
+        createStyle({ styleRef, themeId: theme._id })
+      );
+    }
     return createStyle({
       styleRef: styleRef as StyleRef<T>,
       themeId: theme._id,

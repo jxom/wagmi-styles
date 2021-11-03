@@ -24,7 +24,7 @@ describe('composition', () => {
   }
 
   [themeA, themeB].forEach((theme) => {
-    it('composed style', () => {
+    test('composed style', () => {
       const { toJSON } = render(
         <ThemeProvider theme={theme}>
           <Composed />
@@ -50,7 +50,7 @@ describe('composition', () => {
   }
 
   [themeA, themeB].forEach((theme) => {
-    it('composed style with theme vars', () => {
+    test('composed style with theme vars', () => {
       const { toJSON } = render(
         <ThemeProvider theme={theme}>
           <ComposedWithVars />

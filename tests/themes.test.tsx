@@ -18,7 +18,12 @@ describe('themed', () => {
     return <View style={simpleStyle} />;
   }
 
-  it('simple style', () => {
+  test('simple style (wo/ ThemeProvider)', () => {
+    const { toJSON } = render(<Simple />);
+    expect(toJSON()).toMatchSnapshot();
+  });
+
+  test('simple style (w/ ThemeProvider)', () => {
     const { toJSON } = render(
       <FooTheme.ThemeProvider theme={FooTheme.themeA}>
         <Simple />
@@ -44,7 +49,7 @@ describe('themed', () => {
   }
 
   [FooTheme.themeA, FooTheme.themeB].forEach((theme) => {
-    it('style with theme vars', () => {
+    test('style with theme vars', () => {
       const { toJSON } = render(
         <FooTheme.ThemeProvider theme={theme}>
           <StyleWithVars />
@@ -71,7 +76,7 @@ describe('themed', () => {
     return <View style={styleWithVars2} />;
   }
 
-  it('nested themes', () => {
+  test('nested themes', () => {
     const { toJSON } = render(
       <FooTheme.ThemeProvider theme={FooTheme.themeA}>
         <StyleWithVars />
