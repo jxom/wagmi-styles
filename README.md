@@ -32,7 +32,7 @@ const themeB = createTheme(themeA, {
     text: 'red',
   },
 })
-const { style } = buildTheme(themeA, themeB);
+const { style, useStyle } = buildTheme(themeA, themeB);
 
 ////////////////////////////////////////////////
 
