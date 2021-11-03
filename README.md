@@ -14,19 +14,25 @@ npm install @wagmi/styles
 
 ```tsx
 import { Text } from 'react-native';
-import { createTheme } from '@wagmi/styles';
+import { buildTheme, createTheme } from '@wagmi/styles';
 
 ////////////////////////////////////////////////
 
-// 1. Create & build your theme
+// 1. Create & build your themes
 
-const theme = createTheme({
+const themeA = createTheme({
   colors: {
     brand: 'hotpink',
     text: 'blue',
   },
 });
-const { style } = buildTheme(theme);
+const themeB = createTheme(themeA, {
+  colors: {
+    brand: 'green',
+    text: 'red',
+  },
+})
+const { style } = buildTheme(themeA, themeB);
 
 ////////////////////////////////////////////////
 
