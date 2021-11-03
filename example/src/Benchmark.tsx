@@ -70,7 +70,7 @@ export const simpleBoxStyleRef = style((vars) => ({
   borderWidth: 1,
   borderColor: 'black',
   width: '100%',
-  height: vars.sizes.small,
+  height: 100,
 }));
 
 function SimpleBox(props: any) {

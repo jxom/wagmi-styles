@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 import type { StylesInput, Tokens, ThemeMap } from '../types';
 
-export function getStyleSheets<ThemeTokens extends Tokens>({
+export function createStyleSheets<ThemeTokens extends Tokens>({
   themeMap,
   getStyles,
 }: {

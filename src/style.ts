@@ -1,8 +1,8 @@
-import { getStyleSheets } from './private/getStyleSheets';
+import { createStyleSheets } from './private/createStyleSheets';
 import type { StylesInput } from './types';
 
 export function style<T>(styles: StylesInput<T>) {
-  const { _styleSheet, _composedStyleSheets } = getStyleSheets({
+  const { _styleSheet, _composedStyleSheets } = createStyleSheets({
     themeMap: { _: {} },
     getStyles: () => styles,
   });

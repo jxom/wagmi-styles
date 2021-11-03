@@ -7,7 +7,7 @@ import type {
   ThemeVars,
   Tokens,
 } from '../types';
-import { getStyleSheets } from './getStyleSheets';
+import { createStyleSheets } from './createStyleSheets';
 
 export function generateStyleVariantsFn<ThemeTokens extends Tokens>(
   themeMap: ThemeMap<ThemeTokens>
@@ -24,7 +24,7 @@ export function generateStyleVariantsFn<ThemeTokens extends Tokens>(
         : Object.keys(styles);
 
     const variantMap = variantKeys.reduce((currentVariants, variantKey) => {
-      const { _styleSheet, _composedStyleSheets } = getStyleSheets({
+      const { _styleSheet, _composedStyleSheets } = createStyleSheets({
         themeMap,
         getStyles: ({ themeId }) =>
           typeof styles === 'function'
